@@ -1,0 +1,6 @@
+{
+  "enabledMcpjsonServers": [
+    "northpeak-orders",
+    "northpeak-docs"
+  ]
+}

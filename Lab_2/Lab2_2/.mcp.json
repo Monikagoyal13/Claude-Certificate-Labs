@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "northpeak-orders": {
+      "command": ".venv\\Scripts\\python.exe",
+      "args": ["mcp_servers/orders_server.py"]
+    },
+    "northpeak-docs": {
+      "command": ".venv\\Scripts\\python.exe",
+      "args": ["mcp_servers/docs_server.py"]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "5bb8fc",
+  "parent_id": null,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Alert NG-2027-1142 triggered: 8.3GB outbound transfer from research-analyst-laptop-04 to 203.0.113.47 (Singapore, AS65000) at 02:47 EST."
+    },
+    {
+      "role": "assistant",
+      "content": "Ran SIEM query: no active VPN session during transfer window. Badge swipe log shows owner Maya Iyer left the office at 18:22 EST, well before the transfer."
+    },
+    {
+      "role": "user",
+      "content": "Leading hypotheses so far: (1) compromised credentials used remotely without VPN, (2) insider exfiltration via unattended unlocked session."
+    }
+  ],
+  "summary": ""
+}

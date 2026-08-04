@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -i \"ANTHROPIC_API_KEY\" \"/c/Users/monika.goyal/playwright-praxis/.env\" | head -1)",
+      "Read(//c/Users/monika.goyal/playwright-praxis/**)",
+      "Bash(python coordinator_v2.py)"
+    ]
+  }
+}

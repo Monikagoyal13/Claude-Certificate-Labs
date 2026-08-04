@@ -1,0 +1,38 @@
+{
+  "NP-100245": {
+    "order_id": "NP-100245",
+    "status": "shipped",
+    "email": "dana.lee@example.com",
+    "items": ["TENT-2P-RX", "BAG-20F-DN"],
+    "tracking": "1Z999AA10123456784",
+    "ordered_at": "2025-05-28",
+    "delivered_at": null
+  },
+  "NP-100190": {
+    "order_id": "NP-100190",
+    "status": "delivered",
+    "email": "sam.rivera@example.com",
+    "items": ["BOOT-GTX-M", "FILT-PMP"],
+    "tracking": "1Z999AA10198765432",
+    "ordered_at": "2025-05-30",
+    "delivered_at": "2025-06-04"
+  },
+  "NP-100201": {
+    "order_id": "NP-100201",
+    "status": "processing",
+    "email": "dana.lee@example.com",
+    "items": ["STOVE-CANN", "FUEL-230"],
+    "tracking": null,
+    "ordered_at": "2025-06-10",
+    "delivered_at": null
+  },
+  "NP-100177": {
+    "order_id": "NP-100177",
+    "status": "delivered",
+    "email": "sam.rivera@example.com",
+    "items": ["JACKET-RN-L"],
+    "tracking": "1Z999AA10111222333",
+    "ordered_at": "2025-04-15",
+    "delivered_at": "2025-04-20"
+  }
+}
