@@ -1,0 +1,38 @@
+name: Claude PR Review
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Checkout (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Diff the PR against the base branch
+        run: git diff origin/${{ github.event.pull_request.base.ref }}...HEAD > pr.diff
+
+      - name: Headless review
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          claude -p "Review the changes in pr.diff against this project's CLAUDE.md rules. Output ONLY a {decision, issues} JSON object as specified in .claude/commands/pr-review.md." \
+            --output-format json > review.json
+
+      - name: Gate on the verdict
+        run: python scripts/review_gate.py review.json
