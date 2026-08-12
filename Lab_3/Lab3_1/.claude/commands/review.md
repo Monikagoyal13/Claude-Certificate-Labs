@@ -12,6 +12,7 @@ Review the uncommitted changes (focus: $ARGUMENTS) against this project's style 
    - Tests — is there a test covering the new/changed behavior, including boundaries and both sides of important conditions?
    - Type hints — do public functions have parameter and return type hints?
    - Docstrings — do public functions have a useful docstring?
+   - Input validation — do public functions taking numeric arguments (prices, counts, quantities) reject negative or otherwise invalid values, per `style.md`?
 3. Group every finding into one of three buckets:
    - **Blocker** — must fix (e.g. missing test for new behavior, incorrect logic).
    - **Suggestion** — should consider (e.g. missing docstring, unclear naming).

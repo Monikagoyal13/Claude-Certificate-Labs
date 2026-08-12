@@ -1,0 +1,9 @@
+{
+  "decision": "approve",
+  "issues": [
+    {
+      "severity": "nit",
+      "message": "No test covers opened=True exactly at the 30-day boundary (only day 10 and day 45 are tested)."
+    }
+  ]
+}

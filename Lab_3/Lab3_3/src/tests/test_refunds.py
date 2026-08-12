@@ -34,3 +34,11 @@ def test_refund_amount_returns_zero_outside_the_window():
 def test_refund_amount_rejects_a_negative_price():
     with pytest.raises(ValueError):
         refund_amount(-1.0, 10)
+
+
+def test_opened_item_restocking_fee():
+    assert refund_amount(100.0, 10, opened=True) == 85.0
+
+
+def test_opened_item_outside_window_still_zero():
+    assert refund_amount(100.0, 45, opened=True) == 0.0

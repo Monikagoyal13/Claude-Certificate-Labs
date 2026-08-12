@@ -6,3 +6,4 @@ All notable changes to the NorthPeak Outfitters pricing service will be document
 
 ### Added
 - Pricing library with member discounts, shipping cost calculation, and order totals.
+- Optional gift-wrap fee helper for orders.

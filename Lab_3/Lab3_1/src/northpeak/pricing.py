@@ -24,6 +24,16 @@ def shipping_cost(subtotal: float, express: bool = False) -> float:
     return EXPRESS_SHIPPING_FEE if express else STANDARD_SHIPPING_FEE
 
 
+GIFT_WRAP_FEE_PER_ITEM = 2.50
+
+
+def gift_wrap_fee(item_count: int) -> float:
+    """Return the optional gift-wrap fee for the given number of items."""
+    if item_count < 0:
+        raise ValueError("item_count must not be negative")
+    return round(GIFT_WRAP_FEE_PER_ITEM * item_count, 2)
+
+
 def order_total(items: list[float], is_member: bool = False, express: bool = False) -> float:
     """Return the final order total after member discount and shipping are applied."""
     if any(price < 0 for price in items):
