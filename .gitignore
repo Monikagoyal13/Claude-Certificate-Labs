@@ -10,5 +10,8 @@ venv/
 # VS Code 
 .vscode/ 
 
-# Logs 
+# Logs
 *.log
+
+# Generated run artifacts
+**/scratchpad.json
